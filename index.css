@@ -109,8 +109,9 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.home-form-form {
+.home-form-form { /*form1*/
   width: 100%;
+  height: auto;
   align-self: flex-end;
   padding-left: 0px;
   padding-right: 0px;
