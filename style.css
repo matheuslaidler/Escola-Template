@@ -478,12 +478,12 @@
   text-transform: none;
   text-decoration: none;
 }
-@media(max-width: 991px) {
+@media(max-width: 1024px) {
   .thq-grid-4 {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-@media(max-width: 767px) {
+@media(max-width: 640px) {
   .thq-section-padding {
     padding: var(--dl-space-space-threeunits);
   }
@@ -521,7 +521,7 @@
     width: 100%;
   }
 }
-@media(max-width: 479px) {
+@media(max-width: 360px) {
   .thq-section-padding {
     padding: var(--dl-space-space-oneandhalfunits);
   }
