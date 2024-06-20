@@ -16,7 +16,7 @@
   bottom: 0px;
   height: 100%;
   margin: auto;
-  position: absolute;
+  position: absolute; /*fixed: to a background to the whole page*/
   object-fit: cover;
 }
 .home-form-container {
@@ -27,7 +27,7 @@
   position: absolute;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: rgba(96, 95, 95, 0.77);
+  background-color: rgba(96, 95, 95, 0.77); /*color in front of the image - cor na frente da imagem*/
 }
 .home-form-image1 {
   width: auto;
@@ -86,7 +86,7 @@
   height: auto;
   font-size: 45px;
   text-align: center;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed";
   padding-top: 13px;
   padding-right: var(--dl-space-space-halfunit);
 }
@@ -232,7 +232,7 @@
 }
 @media(max-width: 1280px) {
   .home-form-max-width {
-    padding: 5%px;
+    padding: 5%;
     flex-direction: column-reverse;
   }
   .home-form-container01 {
@@ -503,16 +503,16 @@
 }
 .thanks-title {
   text-align: center;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed";
 }
 .thanks-text {
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: "IBM Plex Sans Condensed";
 }
 .thanks-button {
   font-size: 25px;
   box-shadow: 5px 5px 10px 0px rgba(49, 48, 48, 0.62);
-  font-family: "Fira Sans";
+  font-family: "IBM Plex Sans Condensed"; /*Exo 2*/
 }
 .thanks-image1 {
   width: 46px;
@@ -674,7 +674,7 @@
 }
 .image-text-text {
   color: #ffffff;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed";
 }
 .image-text-content1 {
   gap: var(--dl-space-space-oneandhalfunits);
@@ -685,12 +685,12 @@
 }
 .image-text-text1 {
   color: #fdcf0c;
-  font-family: "Noto Sans";
+  font-family: "IBM Plex Sans Condensed";
 }
 .image-text-text2 {
   color: #fbfbfb;
   font-size: 25px;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed";
 }
 @media(max-width: 1440px) {
   .image-text-layout349 {
@@ -917,13 +917,13 @@
   color: rgb(253, 207, 12);
   align-self: stretch;
   text-align: left;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed";
   background-color: rgba(6, 6, 5, 0.63);
 }
 .infos-text1 {
   align-self: flex-start;
   text-align: left;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed";
 }
 .infos-content3 {
   gap: var(--dl-space-space-oneandhalfunits);
@@ -960,12 +960,12 @@
   color: rgb(253, 207, 12);
   align-self: stretch;
   text-align: right;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed";
   background-color: rgba(6, 6, 5, 0.63);
 }
 .infos-text3 {
   text-align: right;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed";
 }
 .infos-container {
   left: 0px;
@@ -1033,7 +1033,7 @@
   }
   .infos-text2 {
     color: rgb(253, 207, 12);
-    font-family: Exo 2;
+    font-family: 'IBM Plex Sans Condensed';
     background-color: rgba(6, 6, 5, 0.63);
   }
   .infos-container {
@@ -1112,7 +1112,7 @@
   align-self: stretch;
   font-style: normal;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: "IBM Plex Sans Condensed";
   font-weight: 700;
   padding-top: 21px;
   padding-bottom: var(--dl-space-space-halfunit);
@@ -1148,7 +1148,7 @@
   align-self: stretch;
   font-style: normal;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: "IBM Plex Sans Condensed";
   font-weight: 700;
   background-color: #fdcf0c;
 }
@@ -1174,7 +1174,7 @@
   align-self: stretch;
   font-style: normal;
   text-align: center;
-  font-family: "Noto Sans";
+  font-family: "IBM Plex Sans Condensed";
   font-weight: 700;
   padding-top: 19px;
   background-color: #FDCF0C;
@@ -1196,7 +1196,7 @@
 }
 @media(max-width: 1280px) {
   .pillars-button {
-    font-family: Exo 2;
+    font-family: 'IBM Plex Sans Condensed';
   }
   .pillars-max-width {
     height: 100%;
@@ -1264,7 +1264,7 @@
   .pillars-feature2-title {
     height: 100%;
     font-style: normal;
-    font-family: Exo 2;
+    font-family: 'IBM Plex Sans Condensed';
     font-weight: 700;
     padding-top: 21px;
     padding-right: 0px;
@@ -1290,7 +1290,7 @@
     width: 100%;
     height: 100%;
     font-size: 25px;
-    font-family: Exo 2;
+    font-family: 'IBM Plex Sans Condensed';
   }
   .pillars-feature2-description1 {
     width: 100%;
@@ -1305,7 +1305,7 @@
   }
   .pillars-feature3-title {
     height: 100%;
-    font-family: Exo 2;
+    font-family: 'IBM Plex Sans Condensed';
     padding-top: 25px;
     padding-bottom: var(--dl-space-space-unit);
   }
@@ -1352,7 +1352,7 @@
   }
   .pillars-feature2-title1 {
     font-style: normal;
-    font-family: Noto Sans;
+    font-family: 'IBM Plex Sans Condensed';
     font-weight: 700;
     padding-top: var(--dl-space-space-oneandhalfunits);
     padding-bottom: 21px;
@@ -1458,7 +1458,7 @@
 }
 .galerry-text {
   text-align: center;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed";
 }
 .galerry-text1 {
   text-align: center;
@@ -1807,7 +1807,7 @@
 
 @media(max-width: 1440px) {
   .testimonials-text {
-    font-family: Exo 2;
+    font-family: 'IBM Plex Sans Condensed';
   }
   .testimonials-slider-slide {
     height: auto;
@@ -1903,7 +1903,7 @@
   border-radius: var(--dl-radius-radius-radius4);
   flex-direction: column;
   background-size: cover;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.26) 60.00%,rgb(0, 0, 0) 100.00%,rgb(0, 0, 0) 100.00%),linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0.00%,rgba(8, 8, 8, 0.97) 100.00%),url("public/img181-1500h.jpg");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.26) 60.00%,rgb(0, 0, 0) 100.00%,rgb(0, 0, 0) 100.00%),linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0.00%,rgba(8, 8, 8, 0.97) 100.00%),url("../public/img181-1500h.jpg");
 }
 .form-container {
   flex: 0 0 auto;
@@ -1959,7 +1959,7 @@
   color: rgb(253, 207, 12);
   align-self: stretch;
   text-align: center;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed"; /*Exo 2*/
 }
 .form-text05 {
   color: rgb(253, 207, 12);
@@ -1967,7 +1967,7 @@
   font-size: 18px;
   align-self: stretch;
   text-align: center;
-  font-family: "Exo 2";
+  font-family: "IBM Plex Sans Condensed"; /*Exo 2*/
   text-transform: lowercase;
 }
 .form-form {
@@ -2062,7 +2062,7 @@
     width: auto;
     font-size: 18px;
     align-self: stretch;
-    font-family: Exo 2;
+    font-family: "IBM Plex Sans Condensed"; /*Exo 2*/
     text-transform: lowercase;
   }
   .form-text07 {
