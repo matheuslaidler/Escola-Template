@@ -486,7 +486,7 @@
 }
 .thanks-image {
   width: 20%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .thanks-max-width {
   gap: var(--dl-space-space-oneandhalfunits);
@@ -513,6 +513,7 @@
   font-size: 25px;
   box-shadow: 5px 5px 10px 0px rgba(49, 48, 48, 0.62);
   font-family: "IBM Plex Sans Condensed"; /*Exo 2*/
+  pointer-events: none;
 }
 .thanks-image1 {
   width: 46px;
@@ -539,6 +540,7 @@
     padding-left: 0.75%;
     padding-right: 0.75%;
     padding-bottom: 0.75%;
+    pointer-events: none;
   }
   .thanks-image1 {
     margin-top: 5%;
@@ -583,6 +585,7 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
   }
   .thanks-image1 {
     width: 10%;
@@ -617,6 +620,7 @@
     font-size: 70%;
     margin-top: 13px;
     margin-right: 0px;
+    pointer-events: none;
   }
 }
 
@@ -1074,6 +1078,7 @@
 .pillars-button {
   color: #f7c902;
   border-color: #f7c902;
+  /*pointer-events: none;*/
 }
 .pillars-max-width {
   gap: var(--dl-space-space-threeunits);
