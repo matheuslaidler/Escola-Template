@@ -62,7 +62,7 @@
                     <div class="home-form-input thq-flex-row">
                       <input
                         type="text"
-                        id="contact-form-name"
+                        id="contact-form-parentname"
                         required="true"
                         placeholder="Nome do Responsável *"
                         class="home-form-text-input thq-input"
@@ -71,7 +71,7 @@
                     <div class="home-form-input1 thq-flex-row">
                       <input
                         type="text"
-                        id="contact-form-student"
+                        id="contact-form-studentname"
                         placeholder="Nome do Aluno"
                         class="home-form-text-input1 thq-input"
                       />
@@ -79,7 +79,7 @@
                     <div class="home-form-input2 thq-flex-row">
                       <input
                         type="tel"
-                        id="contact-form-tel"
+                        id="contact-form-tell"
                         required="true"
                         placeholder="Telefone (Whatsapp) *"
                         class="home-form-text-input2 thq-input"
@@ -88,7 +88,7 @@
                     <div class="home-form-input3 thq-flex-row">
                       <input
                         type="email"
-                        id="contact-form-email"
+                        id="contact-form-mail"
                         placeholder="Email"
                         class="home-form-text-input3 thq-input"
                       />
@@ -97,10 +97,45 @@
                   <button
                     type="submit"
                     class="home-form-button thq-button-filled"
+                    onclick="formsubmit(event); return false"
                   >
-                    <span class="thq-body-small"><span>Enviar</span></span>
+                    <span class="thq-body-small">Enviar</span>
                   </button>
                 </form>
+<!--          Form - Javascript MailtTo - Test v2 - mudar o email dps
+          change email address to site@crcirandinha.com.br later -->
+                <script>
+// Obtém referências para os elementos do formulário
+const form1 = document.querySelector('.home-form-form');
+const parentnameInput = document.getElementById('contact-form-parentname');
+const studentnameInput = document.getElementById('contact-form-studentname');
+const tellInput = document.getElementById('contact-form-tell');
+const mailInput = document.getElementById('contact-form-mail');
+
+// Função para enviar o formulário
+function formsubmit(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+
+  // Coleta os valores dos campos
+  const parentname = parentnameInput.value;
+  const studentname = studentnameInput.value;
+  const tell = tellInput.value;
+  const mail = mailInput.value;
+
+  // Aqui você pode add lógica para validar os campos, se necessário
+
+  // Crie a URL de e-mail com os valores dos campos
+  const mailtoLink = `mailto:matheuslaidler@gmail.com?subject=Contato&body=${parentname}%0D%0A${studentname}%0D%0A${tell}%0D%0A${mail}`;
+  // const mailtoLink = `mailto:exmp@eu.tu?subject=Contato&body=Nome do Responsável: ${parentname}%0D%0AAluno: ${studentname}%0D%0ATelefone: ${tell}%0D%0AEmail: ${mail}`;
+
+  // Abre o cliente de e-mail padrão com a URL de e-mail
+  window.location.href = mailtoLink;
+}
+
+// Adiciona um ouvinte de evento para o envio do formulário
+form1.addEventListener('submit', formsubmit);
+                </script>
+<!---->
                 <div class="home-form-container07"></div>
               </div>
             </div>
@@ -243,21 +278,21 @@
             class="pillars-button thq-button-outline"
           >
             <span class="thq-body-small"><span>Creche & Escola</span></span>
-          </button>
+          </button><br>
           <div class="pillars-max-width thq-section-max-width">
             <div class="thq-flex-row pillars-section-title">
               <div class="pillars-column thq-flex-column"></div>
             </div>
-            <div class="pillars-content">
-              <div class="pillars-row thq-flex-row">
-                <div class="pillars-feature2 thq-flex-column">
-                  <div class="pillars-content1 thq-flex-column">
-                    <h3 class="pillars-feature2-title thq-heading-3">
-                      <span class="pillars-text">NOSSA ESTRUTURA</span>
+            <div class="pillars-content"> <!--pillars-content-->
+              <div class="pillars-row thq-flex-row"> <!--pillars-row thq-flex-row-->
+                <div class="pillars-feature2 thq-flex-column"> <!--pillars-feature2 thq-flex-column-->
+                  <div class="pillars-content1 thq-flex-column"> <!--pillars-content1 thq-flex-column-->
+                    <h3 class="pillars-feature2-title thq-heading"> <!--pillars-feature2-title thq-heading-3-->
+                      <span class="pillars-text">NOSSA ESTRUTURA</span> <!--pillars-text-->
                       <br />
                     </h3>
-                    <span class="pillars-feature2-description thq-body-small">
-                      <span class="pillars-text2">
+                    <span class="pillars-feature2-description thq-body-small"> <!--pillars-feature2-description thq-body-small-->
+                      <span class="pillars-text2"> <!--pillars-text2-->
                         A Escola Cirandinha ofereceu uma infraestrutura moderna,
                         com salas de aula bem equipadas, laboratórios de
                         informática, áreas de recreação e espaços para
@@ -270,12 +305,12 @@
                     </span>
                   </div>
                 </div>
-                <div class="pillars-feature21 thq-flex-column">
-                  <div class="pillars-content2 thq-flex-column">
-                    <h3 class="pillars-feature2-title1 thq-heading-3">
+                <div class="pillars-feature21 thq-flex-column"> <!--pillars-feature21 thq-flex-column-->
+                  <div class="pillars-content2 thq-flex-column"> <!--pillars-content2 thq-flex-column-->
+                    <h3 class="pillars-feature2-title thq-heading"> <!--pillars-feature2-title1 thq-heading-3-->
                       NOSSA EQUIPE DE COLABORADORES
                     </h3>
-                    <span class="pillars-feature2-description1 thq-body-small">
+                    <span class="pillars-feature2-description1 thq-body-small"> <!--pillars-feature2-description1 thq-body-small-->
                       Nossa equipe é composta por profissionais qualificados,
                       incluindo pediatra, enfermeira presente diariamente,
                       psicóloga e nutricionista. Oferecemos cuidado integral que
@@ -284,12 +319,12 @@
                     </span>
                   </div>
                 </div>
-                <div class="pillars-feature3 thq-flex-column">
-                  <div class="pillars-content3 thq-flex-column">
-                    <h3 class="pillars-feature3-title thq-heading-3">
+                <div class="pillars-feature3 thq-flex-column"> <!--pillars-feature3 thq-flex-column-->
+                  <div class="pillars-content3 thq-flex-column"> <!--pillars-content3 thq-flex-column-->
+                    <h3 class="pillars-feature3-title thq-heading"> <!--pillars-feature3-title thq-heading-3-->
                       ATIVIDADES EXTRAS
                     </h3>
-                    <span class="pillars-feature3-description thq-body-small">
+                    <span class="pillars-feature3-description thq-body-small"> <!--pillars-feature3-description thq-body-small-->
                       Oferecemos atividades extras como capoeira, ginástica
                       artística, ballet e o curso de inglês Brasas,
                       proporcionando um desenvolvimento diversificado para
@@ -769,10 +804,53 @@
                     class="thq-input"
                   ></textarea>
                 </div>
-                <button type="submit" class="form-button thq-button-filled">
-                  <span class="thq-body-small"><span>Enviar</span></span>
+                <button type="submit" class="form-button thq-button-filled" onclick="submitForm();">
+                  <span class="thq-body-small">Enviar</span>
                 </button>
               </form>
+<!--          Formulário - Javascript para MailtTo - Testes v2 
+           dps trocar o email para site@crcirandinha.com.br -->
+              <script>
+// Obtém referências para os elementos do formulário
+const form = document.querySelector('.form-form');
+const nameInput = document.getElementById('contact-form-name');
+const studentInput = document.getElementById('contact-form-student');
+const dateInput = document.getElementById('contact-form-date');
+const yearInput = document.getElementById('contact-form-year');
+const classInput = document.getElementById('contact-form-class');
+const turnInput = document.getElementById('contact-form-turn');
+const emailInput = document.getElementById('contact-form-email');
+const zappInput = document.getElementById('contact-form-zapp');
+const messageInput = document.getElementById('contact-form-message');
+
+// Função para enviar o formulário
+function submitForm(event) {
+  event.preventDefault(); // Impede o envio padrão do formulário
+
+  // Coleta os valores dos campos
+  const name = nameInput.value;
+  const student = studentInput.value;
+  const date = dateInput.value;
+  const year = yearInput.value;
+  const classInfo = classInput.value;
+  const turn = turnInput.value;
+  const email = emailInput.value;
+  const zapp = zappInput.value;
+  const message = messageInput.value;
+
+  // Aqui você pode add lógica para validar os campos, se necessário
+
+  // Crie a URL de e-mail com os valores dos campos
+  const mailtoLink = `mailto:matheuslaidler@gmail.com?subject=Contato&body=${name}%0D%0A${student}%0D%0A${date}%0D%0A${year}%0D%0A${classInfo}%0D%0A${turn}%0D%0A${email}%0D%0A${zapp}%0D%0A${message}`;
+
+  // Abre o cliente de e-mail padrão com a URL de e-mail
+  window.location.href = mailtoLink;
+}
+
+// Add um ouvinte de evento p/ o envio do formulário
+form.addEventListener('submit', submitForm);
+              </script>
+<!---->
             </div>
           </div>
         </div>

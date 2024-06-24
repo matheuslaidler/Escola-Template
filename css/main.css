@@ -166,19 +166,19 @@
 }
 .thq-heading-1 {
   font-size: 48px;
-  font-family: STIX Two Text;
+  font-family: 'IBM Plex Sans Condensed';
   font-weight: 700;
   line-height: 1.5;
 }
 .thq-heading-2 {
   font-size: 35px;
-  font-family: STIX Two Text;
+  font-family: 'IBM Plex Sans Condensed';
   font-weight: 600;
   line-height: 1.5;
 }
 .thq-heading-3 {
   font-size: 26px;
-  font-family: STIX Two Text;
+  font-family: 'IBM Plex Sans Condensed';
   font-weight: 600;
   line-height: 1.5;
 }
@@ -208,6 +208,7 @@
 }
 .thq-section-max-width {
   width: 100%;
+  height: fit-content;
   max-width: var(--dl-size-size-maxwidth);
 }
 .thq-img-ratio-1-1 {
