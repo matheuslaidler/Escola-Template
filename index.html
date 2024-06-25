@@ -97,16 +97,16 @@
                   <button
                     type="submit"
                     class="home-form-button thq-button-filled"
-                    onclick="formsubmit(event); return false"
-                  >
+                    onclick="formsubmit();"
+                  > <!--onclick="formsubmit(); return false"-->
                     <span class="thq-body-small">Enviar</span>
                   </button>
                 </form>
-<!--          Form - Javascript MailtTo - Test v2 - mudar o email dps
-          change email address to site@crcirandinha.com.br later -->
+<!--          Form - Javascript MailtTo - Test v2 -
+         site@crcirandinha.com.br  -->
                 <script>
 // Obtém referências para os elementos do formulário
-const form1 = document.querySelector('.home-form-form');
+const contactform = document.querySelector('.home-form-form');
 const parentnameInput = document.getElementById('contact-form-parentname');
 const studentnameInput = document.getElementById('contact-form-studentname');
 const tellInput = document.getElementById('contact-form-tell');
@@ -125,15 +125,14 @@ function formsubmit(event) {
   // Aqui você pode add lógica para validar os campos, se necessário
 
   // Crie a URL de e-mail com os valores dos campos
-  const mailtoLink = `mailto:matheuslaidler@gmail.com?subject=Contato&body=${parentname}%0D%0A${studentname}%0D%0A${tell}%0D%0A${mail}`;
-  // const mailtoLink = `mailto:exmp@eu.tu?subject=Contato&body=Nome do Responsável: ${parentname}%0D%0AAluno: ${studentname}%0D%0ATelefone: ${tell}%0D%0AEmail: ${mail}`;
+  const mailtoLink = `mailto:site@crcirandinha.com.br?subject=Contato&body=Formulário de Contato Inicial%0D%0ASegue os dados preenchidos no formulário %0D%0A%0D%0A.Nome do Responsável - ${parentname}%0D%0A.Aluno - ${studentname}%0D%0A.Telefone/Whatsapp - ${tell}%0D%0A.Email - ${mail}%0D%0A%0D%0A Atenciosamente,%0D%0A${parentname}.`;
 
   // Abre o cliente de e-mail padrão com a URL de e-mail
   window.location.href = mailtoLink;
 }
 
 // Adiciona um ouvinte de evento para o envio do formulário
-form1.addEventListener('submit', formsubmit);
+contactform.addEventListener('submit', formsubmit);
                 </script>
 <!---->
                 <div class="home-form-container07"></div>
@@ -809,7 +808,7 @@ form1.addEventListener('submit', formsubmit);
                 </button>
               </form>
 <!--          Formulário - Javascript para MailtTo - Testes v2 
-           dps trocar o email para site@crcirandinha.com.br -->
+            site@crcirandinha.com.br -->
               <script>
 // Obtém referências para os elementos do formulário
 const form = document.querySelector('.form-form');
@@ -841,7 +840,7 @@ function submitForm(event) {
   // Aqui você pode add lógica para validar os campos, se necessário
 
   // Crie a URL de e-mail com os valores dos campos
-  const mailtoLink = `mailto:matheuslaidler@gmail.com?subject=Contato&body=${name}%0D%0A${student}%0D%0A${date}%0D%0A${year}%0D%0A${classInfo}%0D%0A${turn}%0D%0A${email}%0D%0A${zapp}%0D%0A${message}`;
+  const mailtoLink = `mailto:site@crcirandinha.com.br?subject=Formulário de Contado&body=Segue todas os dados do formulário de contato para matrícula ou afins.%0D%0A%0D%0A.Nome do Responsável - ${name}%0D%0A.Nome do(a) Filho(a) - ${student}%0D%0A.Data de Nascimento do(a) Filho(a) - ${date}%0D%0A.Ano Pretendido - ${year}%0D%0A.Turma/Série Atual - ${classInfo}%0D%0A.Turno - ${turn}%0D%0A.Email do responsável - ${email}%0D%0A.Telefone de Contato / Whatsapp - ${zapp}%0D%0A.Mensagem do Responsável %0D%0A ${message} %0D%0A%0D%0A Atenciosamente,%0D%0A${name}.`;
 
   // Abre o cliente de e-mail padrão com a URL de e-mail
   window.location.href = mailtoLink;
