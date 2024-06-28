@@ -1064,6 +1064,29 @@
   }
 }
 
+.pillars-feature2-title,
+.pillars-feature2-title,
+.pillars-feature3-title {
+  width:auto;
+  height:max-content;
+  padding:0.75vw;
+}
+
+@media(max-width: 2440px) {
+.pillars-feature2-description,
+.pillars-feature2-description1,
+.pillars-feature3-description {
+  padding: 1.2vw; /* Ajuste o valor conforme necessário */
+}
+}
+@media(max-width: 6440px) {
+.pillars-feature2-description,
+.pillars-feature2-description1,
+.pillars-feature3-description {
+  padding: 0.5vw; /* Ajuste o valor conforme necessário */
+}
+}
+
 .pillars-layout251 {
   width: 100%;
   height: auto;
