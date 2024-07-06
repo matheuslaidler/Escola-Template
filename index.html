@@ -62,7 +62,7 @@
                 </div>
               </div>
               <div class="home-form-max-width1 thq-section-max-width">
-                <form class="home-form-form thq-card"> <!-- primeiro formulário -->
+                <form class="home-form-form thq-card" action="welcome-contact.php" method="post" name="form"> <!-- primeiro formulário -->
                   <div class="home-form-container06">
                     <div class="home-form-input thq-flex-row">
                       <input
@@ -102,43 +102,11 @@
                   <button
                     type="submit"
                     class="home-form-button thq-button-filled"
-                    onclick="formsubmit();"
-                  > <!--onclick="formsubmit(); return false"-->
+                    
+                  > <!--onclick="formsubmit();" - para o mailto-1-->
                     <span class="thq-body-small">Enviar</span>
                   </button>
                 </form>
-<!--          Form - Javascript MailtTo - Test v2 -
-         site@crcirandinha.com.br  -->
-                <script>
-// Obtém referências para os elementos do formulário
-const contactform = document.querySelector('.home-form-form');
-const parentnameInput = document.getElementById('contact-form-parentname');
-const studentnameInput = document.getElementById('contact-form-studentname');
-const tellInput = document.getElementById('contact-form-tell');
-const mailInput = document.getElementById('contact-form-mail');
-
-// Função para enviar o formulário
-function formsubmit(event) {
-  event.preventDefault(); // Impede o envio padrão do formulário
-
-  // Coleta os valores dos campos
-  const parentname = parentnameInput.value;
-  const studentname = studentnameInput.value;
-  const tell = tellInput.value;
-  const mail = mailInput.value;
-
-  // Aqui você pode add lógica para validar os campos, se necessário
-
-  // Crie a URL de e-mail com os valores dos campos
-  const mailtoLink = `mailto:site@crcirandinha.com.br?subject=Contato&body=Formulário de Contato Inicial%0D%0ASegue os dados preenchidos no formulário %0D%0A%0D%0A.Nome do Responsável - ${parentname}%0D%0A.Aluno - ${studentname}%0D%0A.Telefone/Whatsapp - ${tell}%0D%0A.Email - ${mail}%0D%0A%0D%0A Atenciosamente,%0D%0A${parentname}.`;
-
-  // Abre o cliente de e-mail padrão com a URL de e-mail
-  window.location.href = mailtoLink;
-}
-
-// Adiciona um ouvinte de evento para o envio do formulário
-contactform.addEventListener('submit', formsubmit);
-                </script>
 <!---->
                 <div class="home-form-container07"></div>
               </div>
@@ -148,43 +116,7 @@ contactform.addEventListener('submit', formsubmit);
             </div>
           </div>
         </div>
-        
-        <!-- thanks page  thanks.html --
-        <div class="thanks-container thq-section-padding">
-          <img
-            alt="image"
-            src="public/logob.png" width="auto" height="105hm"
-            class="thanks-image"
-          />
-          <div class="thanks-max-width thq-section-max-width">
-            <div class="thanks-container1">
-              <h2 class="thanks-title thq-heading-2">
-                <span>Obrigado por Entrar em Contato!</span>
-              </h2>
-              <h3 class="thanks-text thq-heading-3">
-                <span>
-                  Recebemos suas informações e em breve nossa equipe entrará em
-                  contato com você. Enquanto isso, sinta-se à vontade para
-                  explorar nosso site e conhecer mais sobre nossa metodologia,
-                  projetos e a infraestrutura que oferecemos.
-                </span>
-              </h3>
-              <button
-                type="button"
-                disabled="true"
-                class="thanks-button thq-button-filled"
-              >
-                <span>Estamos ansiosos para conhecer você e seu filho(a)!</span>
-              </button>
-              <img
-                alt="image"
-                src="public/down.png"
-                class="thanks-image1"
-              />
-            </div>
-          </div>
-        </div>
-       --end-->
+<!---->
         <div class="image-text-layout349 thq-section-padding"> 
           <div class="image-text-max-width thq-section-max-width">
             <div class="image-text-image-container">
@@ -196,7 +128,7 @@ contactform.addEventListener('submit', formsubmit);
             </div>
             <div class="image-text-content">
               <div class="image-text-section-title">
-                <h2 class="image-text-text thq-heading-2">
+                <h2 class="image-text-text thq-heading-2" id="sobre"> <!--index.html#sobre-->
                   <span>Realizando Sonhos Através da Educação</span>
                 </h2>
                 <div class="image-text-content1">
@@ -353,7 +285,7 @@ contactform.addEventListener('submit', formsubmit);
         >
           <div class="galerry-max-width thq-section-max-width">
             <div class="galerry-section-title">
-              <h2 class="galerry-text thq-heading-2">
+              <h2 class="galerry-text thq-heading-2" id="galeria"> <!--index.html#galeria-->
                 <span>Faça um tuor pelo Cirandinha</span>
               </h2>
               <span class="galerry-text1 thq-body-large">
@@ -481,7 +413,7 @@ contactform.addEventListener('submit', formsubmit);
         -->
 <!-- galeria de video -->
 <div class="thq-section-padding testimonials-root-class-name">
-  <h1 class="testimonials-text">Depoimentos</h1><br><p>Galeria de Vídeos</p>
+  <h1 class="testimonials-text" id="videos">Depoimentos</h1><br><p>Galeria de Vídeos</p><!--index.html#videos-->
   <div class="testimonials-max-width thq-section-max-width">
     <div
       data-thq="slider"
@@ -577,7 +509,7 @@ contactform.addEventListener('submit', formsubmit);
             <div class="form-content thq-flex-column">
               <div class="form-section-title thq-card">
                 <div class="form-content1">
-                  <h2 class="form-text04 thq-heading-2">Entre em Contato</h2>
+                  <h2 class="form-text04 thq-heading-2" id="contato">Entre em Contato</h2> <!--index.html#contato-->
                   <h2 class="form-text05 thq-heading-2">
                     <span>Faça</span>
                     <span class="form-text07">já</span>
@@ -587,7 +519,7 @@ contactform.addEventListener('submit', formsubmit);
                   </h2>
                 </div>
               </div>
-              <form class="form-form thq-card"> 
+              <form class="form-form thq-card" action="contact.php" method="post" name="form"> 
                 <!-- 2nd form / 
                  background on css file: 
                  .form-contact9 <- style.css -- end of line on 'background-image' --no arquivo style.css, em .form-contact1 tem o background-image com a config de cor e o link da imagem de fundo
@@ -670,52 +602,11 @@ contactform.addEventListener('submit', formsubmit);
                     class="thq-input"
                   ></textarea>
                 </div>
-                <button type="submit" class="form-button thq-button-filled" onclick="submitForm();">
+                <button type="submit" class="form-button thq-button-filled" >
+                  <!-- onclick="submitForm();" - para o mailto-2 --> 
                   <span class="thq-body-small">Enviar</span>
                 </button>
               </form>
-<!--          Formulário - Javascript para MailtTo - Testes v2 
-            site@crcirandinha.com.br -->
-              <script>
-// Obtém referências para os elementos do formulário
-const form = document.querySelector('.form-form');
-const nameInput = document.getElementById('contact-form-name');
-const studentInput = document.getElementById('contact-form-student');
-const dateInput = document.getElementById('contact-form-date');
-const yearInput = document.getElementById('contact-form-year');
-const classInput = document.getElementById('contact-form-class');
-const turnInput = document.getElementById('contact-form-turn');
-const emailInput = document.getElementById('contact-form-email');
-const zappInput = document.getElementById('contact-form-zapp');
-const messageInput = document.getElementById('contact-form-message');
-
-// Função para enviar o formulário
-function submitForm(event) {
-  event.preventDefault(); // Impede o envio padrão do formulário
-
-  // Coleta os valores dos campos
-  const name = nameInput.value;
-  const student = studentInput.value;
-  const date = dateInput.value;
-  const year = yearInput.value;
-  const classInfo = classInput.value;
-  const turn = turnInput.value;
-  const email = emailInput.value;
-  const zapp = zappInput.value;
-  const message = messageInput.value;
-
-  // Aqui você pode add lógica para validar os campos, se necessário
-
-  // Crie a URL de e-mail com os valores dos campos
-  const mailtoLink = `mailto:site@crcirandinha.com.br?subject=Formulário de Contado&body=Segue todas os dados do formulário de contato para matrícula ou afins.%0D%0A%0D%0A.Nome do Responsável - ${name}%0D%0A.Nome do(a) Filho(a) - ${student}%0D%0A.Data de Nascimento do(a) Filho(a) - ${date}%0D%0A.Ano Pretendido - ${year}%0D%0A.Turma/Série Atual - ${classInfo}%0D%0A.Turno - ${turn}%0D%0A.Email do responsável - ${email}%0D%0A.Telefone de Contato / Whatsapp - ${zapp}%0D%0A.Mensagem do Responsável %0D%0A ${message} %0D%0A%0D%0A Atenciosamente,%0D%0A${name}.`;
-
-  // Abre o cliente de e-mail padrão com a URL de e-mail
-  window.location.href = mailtoLink;
-}
-
-// Add um ouvinte de evento p/ o envio do formulário
-form.addEventListener('submit', submitForm);
-              </script>
 <!---->
             </div>
           </div>
@@ -838,5 +729,12 @@ form.addEventListener('submit', submitForm);
       defer=""
       src="js/main.js"
     ></script>
+    <!-- para fazer o formulário funcionar via mailto configurado: -->
+    <script
+      defer=""
+      src="js/mailto-1.js"></script>
+    <script
+      defer=""
+      src="js/mailto-2.js"></script>
   </body>
 </html>

@@ -27,7 +27,7 @@
     <a class="whatsapp-button" href="https://wa.me/5521967703752" target="_blank">
       <i class="fa fa-phone"></i>
   </a>  
-    <div>
+  <div style="height: 64vw;"><!-- style="height: 40vw;" /  50vw / 64 / 40-->
       <link rel="stylesheet" href="css/swiper.css" />
  <!-- thanks page -->
         <div class="thanks-container thq-section-padding">
@@ -65,6 +65,47 @@
           </div>
         </div>
        <!--end-->
+
+       <!-- redirecionar para a página inicial dps de chegar no final da página ou quer descer mais que o limite
+            para telas em que já mostra a página inteira de uma vez, terá um delay para redirecionamento-->
+        <!---->
+        <script>
+          function redirectToIndex() {
+            window.location.href = 'index.html#videos'; // #videos #sobre #galeria #contato
+          }
+      
+          // Verifica se o usuário tentou rolar além do conteúdo da página
+          function checkScrollPosition() {
+            var windowHeight = window.innerHeight;
+            var bodyHeight = document.body.scrollHeight;
+            var scrolled = window.scrollY;
+            var scrollable = bodyHeight - windowHeight;
+      
+            // Verifica se o usuário rolou até o final da página ou tentou rolar além do limite
+            if ((windowHeight + scrolled) >= bodyHeight || (scrollable <= 0 && scrolled > 0)) {
+              redirectToIndex();
+            }
+          }
+      
+          // Adiciona um listener para o evento de scroll
+          window.addEventListener('scroll', checkScrollPosition);
+      
+          // Configura um atraso de 3 segundos antes de verificar a posição inicial
+          setTimeout(() => {
+            checkScrollPosition();
+          }, 1250); // 3000 milissegundos = 3 segundos
+        </script>
+      
+      
+      
+      
+      <!--
+        function redirectToIndex() {
+          window.location.href = 'index.html#videos'; //#videos #sobre #galeria #contato
+        }
+          -->
+      
+     
        
   </body>
 </html>
