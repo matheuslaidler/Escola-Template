@@ -131,7 +131,7 @@
 }
 .home-form-text-input {
   flex: 1;
-  background-color: #fdcf0c;
+  background-color: #fcfcfc;
 }
 .home-form-input1 {
   width: 100%;
@@ -140,7 +140,7 @@
 }
 .home-form-text-input1 {
   flex: 1;
-  background-color: #fdcf0c;
+  background-color: #fcfcfc;
 }
 .home-form-input2 {
   width: 100%;
@@ -149,7 +149,7 @@
 }
 .home-form-text-input2 {
   flex: 1;
-  background-color: #fdcf0c;
+  background-color: #fcfcfc;
 }
 .home-form-input3 {
   width: 100%;
@@ -158,11 +158,11 @@
 }
 .home-form-text-input3 {
   flex: 1;
-  background-color: #fdcf0c;
+  background-color: #fcfcfc;
 }
 .home-form-button {
   color: #fdcf0c;
-  align-self: stretch;
+  align-self: center;
   background-color: #464643;
 }
 .home-form-container07 {
@@ -375,7 +375,7 @@
     padding-right: 4px;
   }
   .home-form-form {
-    width: 407px;
+    width: 100%;/*bugfixed*/
     padding-top: 0px;
   }
   .home-form-container06 {
@@ -478,6 +478,7 @@
 
 .thanks-container {
   gap: var(--dl-space-space-unit);
+  width: 100%;
   height: 100%;
   display: flex;
   position: relative;
@@ -589,6 +590,10 @@
   }
   .thanks-image1 {
     width: 10%;
+    margin-top: var(--dl-space-space-unit);
+  }
+  .thanks-image {
+    width: 50%;
     margin-top: var(--dl-space-space-unit);
   }
 }
@@ -1458,7 +1463,7 @@
   gap: var(--dl-space-space-oneandhalfunits);
   width: 100%;
   height: auto;
-  display: inline-flex; /*flex*/
+  display: flex; /*flex or semi-flex*/
   align-items: center;
   flex-direction: row;
 }
@@ -1472,7 +1477,21 @@
   flex-shrink: 0;
   justify-content: center;
 }
+.galerry-container1,
+.galerry-container2,
+.galerry-container3,
+.galerry-container4,
+.galerry-container5,
+.galerry-container6 {
+  gap: var(--dl-space-space-oneandhalfunits);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin: 0dvh;
+}
+
 /*ainda mexer / arrumar - a lot of bugs to solve*/
+@media(max-width: 900px) {
 .galerry-image1,
 .galerry-image2,
 .galerry-image3,
@@ -1480,10 +1499,24 @@
 .galerry-image5,
 .galerry-image6 {
   width: 100%;
-  height: 18vw;/**/
-  object-fit: cover;
+  height: 110vw;/**/
+  object-fit: cover; /*contain - auto -> se ja tiverem na msm res /se n, cover com 110vw*/
+  padding-bottom: auto;
 }
-
+}
+@media(max-width: 1333px) {
+  .galerry-image1,
+  .galerry-image2,
+  .galerry-image3,
+  .galerry-image4,
+  .galerry-image5,
+  .galerry-image6 {
+  width: 100%;
+  height: 100cqmax;/**/
+  object-fit: contain; /*contain - auto -> se ja tiverem na msm res /se n, cover com 110vw*/
+  padding-bottom: auto;
+  }
+}
 
 .galerry-gallery3 {
   width: 100%;
