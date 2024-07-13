@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Obrigado! - Cirandinha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="css/reset.css" /> <!--data-tag="reset-style-sheet"-->
+    <link rel="stylesheet" href="css/default.css" /> <!--data-tag="default-style-sheet"-->
+     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    /> <!--exo 2-->
+    <link
+      rel="stylesheet"
+      href="css/main.css"
+    />
+    <!-- font awesome - default / /  fa fa-phone  class-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <link
+      rel="stylesheet"
+      href="css/style.css"
+    />
+    <a class="whatsapp-button" href="https://wa.me/5521967703752" target="_blank">
+      <i class="fa fa-phone"></i>
+  </a>  
+  <div style="height: 64vw;"><!-- style="height: 40vw;" /  50vw / 64 / 40-->
+      <link rel="stylesheet" href="css/swiper.css" />
+ <!-- thanks page -->
+        <div class="thanks-container thq-section-padding">
+          <img
+            alt="image"
+            src="public/logob.png" width="auto" height="105hm"
+            class="thanks-image"
+          />
+          <div class="thanks-max-width thq-section-max-width">
+            <div class="thanks-container1">
+              <h2 class="thanks-title thq-heading-2">
+                <span>Obrigado por Entrar em Contato!</span>
+              </h2>
+              <h3 class="thanks-text thq-heading-3">
+                <span>
+                  Recebemos suas informações e em breve nossa equipe entrará em
+                  contato com você. Enquanto isso, sinta-se à vontade para
+                  explorar nosso site e conhecer mais sobre nossa metodologia,
+                  projetos e a infraestrutura que oferecemos.
+                </span>
+              </h3>
+              <button
+                type="button"
+                disabled="true"
+                class="thanks-button thq-button-filled"
+              >
+                <span>Estamos ansiosos para conhecer você e seu filho(a)!</span>
+              </button>
+              <img
+                alt="image"
+                src="public/down.png"
+                class="thanks-image1"
+              />
+            </div>
+          </div>
+        </div>
+       <!--end-->
+
+       <!-- redirecionar para a página inicial dps de chegar no final da página ou quer descer mais que o limite
+            para telas em que já mostra a página inteira de uma vez, terá um delay para redirecionamento-->
+        <!---->
+        <script>
+          function redirectToIndex() {
+            window.location.href = 'index.html#videos'; // #videos #sobre #galeria #contato
+          }
+      
+          // Verifica se o usuário tentou rolar além do conteúdo da página
+          function checkScrollPosition() {
+            var windowHeight = window.innerHeight;
+            var bodyHeight = document.body.scrollHeight;
+            var scrolled = window.scrollY;
+            var scrollable = bodyHeight - windowHeight;
+      
+            // Verifica se o usuário rolou até o final da página ou tentou rolar além do limite
+            if ((windowHeight + scrolled) >= bodyHeight || (scrollable <= 0 && scrolled > 0)) {
+              redirectToIndex();
+            }
+          }
+      
+          // Adiciona um listener para o evento de scroll
+          window.addEventListener('scroll', checkScrollPosition);
+      
+          // Configura um atraso de 3 segundos antes de verificar a posição inicial
+          setTimeout(() => {
+            checkScrollPosition();
+          }, 1250); // 3000 milissegundos = 3 segundos
+        </script>
+      
+      
+      
+      
+      <!--
+        function redirectToIndex() {
+          window.location.href = 'index.html#videos'; //#videos #sobre #galeria #contato
+        }
+          -->
+      
+     
+       
+  </body>
+</html>

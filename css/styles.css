@@ -1,0 +1,688 @@
+/* General Styles */
+body, html {
+    font-family: 'IBM Plex Sans Condensed', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Impede a rolagem lateral */
+}
+
+section {
+    width: 100%;
+    padding: 20px;
+}
+
+section, footer {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.colorTheme {
+    color: #ffcc00;
+}
+
+
+/* Section 1 */
+.section-1 {
+    background: url('../img/home.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+
+.section-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(71, 71, 71, 0.774);
+    z-index: 1;
+}
+
+.section-1 .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-1 .content img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.section-1 h1 {
+    font-size: 35px;
+    color: #fff;
+    max-width: 450px;
+    margin-bottom: 0;
+}
+
+.section-1 p {
+    font-size: 15px;
+    color: #fff;
+    margin-top: 0;
+}
+
+.section-1 a {
+    font-size: 15px;
+    color: #fff;
+    margin: 0;
+}
+
+.section-1 i {
+    font-size: 12px;
+    color: #ffe600c0;
+    align-self: center;
+}
+
+.section-1 .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-1 .form-container .text {
+    margin-bottom: 120px; /* altura para ficar a escrita ao lado do formulário inicial */
+    /* margin auto para mobile - feito */
+    padding: 20px;/*15*/
+}
+
+.section-1 .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-1 .form input,
+.section-1 .form button {
+    width: 125px;
+    margin: 0.45px 0 4.5px;
+    padding: 9.5px;
+    border: none;
+    border-radius: 8.5px;
+}
+.section-1 .form button {
+    background-color: #ffcc00;
+    color: #000;
+    cursor: pointer;
+    width: 60px;
+    padding: 12px;
+    margin: auto; /* center */
+}
+
+.section-1 .form small {
+    font-size: 14px;
+    color: #fff;
+}
+
+@media (min-width: 769px) {
+    .section-1 .form-container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .section-1 .form {
+        align-items: flex-start;
+    }
+    .section-1 .content img {
+        max-width: 250px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (min-width: 720px) {
+    .section-1 .form input,
+    .section-1 .form button {
+    width: 125px;
+    }
+    .section-1 .form button {
+    width: 60px;
+    }
+}
+
+@media (min-width: 380px) {
+    .section-1 .form input,
+    .section-1 .form button {
+    width: 225px;
+    }
+    .section-1 .form button {
+    width: 60px;
+    }
+}
+
+
+/* Section 2 */
+.section-2 {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    display: flex; /*se quiser q a sessão deixe de ficar centralizada e fique sempre no canto esquerdo, tire o flex*/
+    width: 100%;
+    margin: 0;
+    background: #333;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.section-2 h2 {
+    color: #f2f7d1;
+}
+
+@media (max-width: 768px) {
+    .section-2 {
+        flex-direction: row;
+        text-align: center;
+        height: auto;
+        width: 100%;
+    }
+
+
+    /* NÃO MEXER NESSA CONFIGURAÇÃO DA SESSÃO 1 DENTRO DA SESSÃO 2 */
+    .section-1 .form-container .text {
+        margin: 0; /* margin auto / 0 para mobile não ter o gap entre o texto e o formulario*/
+    }
+}
+/* Container Info */
+
+.containerInfo {
+    display: flex;
+    background-color: #333;
+    color: white;
+    max-width: 1200px;
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%;
+}
+.image-section {
+    flex: 1 1 120%; /* flex-grow, flex-shrink, flex-basis */
+    background: url('../img/garoto.jpg') no-repeat center center/cover;
+}
+.text-section {
+    flex: 1 1 130%; /* flex-grow, flex-shrink, flex-basis */
+    padding: 50px;
+}
+.text-section h2 {
+    margin-top: 0;
+}
+.text-section h5 {
+    color: #fdcf0c;
+}
+@media (max-width: 768px) {
+    .containerInfo {
+        flex-direction: column;
+    }
+    .image-section {
+        height: 400px; 
+        flex: 0 1 auto; /* Resetando o flex para mobile */
+    }
+    .text-section {
+        flex: 1 1 auto;
+    }
+}
+@media (max-width: 468px) {
+    .image-section {
+        padding: 10vh;
+        height: 150px; 
+        flex: 0 1 auto; 
+    }
+    .text-section {
+        flex: 1 1 auto; 
+    }
+}
+
+/*sobre - dois pilares - boxes*/
+
+.containerBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.boxes {
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 22px rgba(0, 0, 0, 0.164);
+}
+.boxes h2 {
+    background-color: #666;
+    color: #f1c40f;
+    padding: 10px;
+    margin: -20px -20px 20px -20px;
+}
+.boxes:nth-child(1) h2 {
+    text-align: left;
+    padding-left: 10px;
+}
+.boxes:nth-child(2) h2 {
+    text-align: right;
+    padding-right: 10px;
+}
+.boxes p {
+    color: #333;
+    text-align: justify;
+}
+/*desktop text test*/
+.boxes:nth-child(1) p {
+    color: #333;
+    text-align: left;
+}
+.boxes:nth-child(2) p {
+    color: #333;
+    text-align: right;
+}
+/*end*/
+.faixa {
+    background-color: #FFC107;
+    height: 50px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.183);
+}
+@media (max-width: 768px) {
+    .containerBox {
+        flex-direction: column;
+    }
+    .boxes {
+        width: 100%;
+    }
+    .boxes:nth-child(1) h2 {
+        text-align: center;
+    }
+    .boxes:nth-child(2) h2 {
+        text-align: center;
+    }
+    .boxes:nth-child(1) p {
+        text-align: justify;
+    }
+    .boxes:nth-child(2) p {
+        text-align: justify;
+    }
+}
+
+
+/* sobre section - new pillars and gallery - Info / Sobre / About + galeria de fotos e video*/
+
+/*my new css to "pillars"*/
+
+.section-2-1 {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0; /* Remove margem padrão */
+    width: 100%;
+}        
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Garantindo espaço igual entre os elementos */
+    margin-top: 15px;/*aumentar o espaço na parte de cima dos pilares*/
+  }
+  
+  .box {
+    flex: 1 1 30%;
+    margin: 10px;
+    max-width: 30%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Incluindo padding e border no tamanho total */
+  }
+  
+  .title {
+    background-color: #FFC107;
+    color: #000;
+    padding: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contentz {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
+  
+  .contentz p {
+    margin: 0;
+  }
+  
+  
+  @media (max-width: 1024px) {
+    .box {
+        flex: 1 1 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+    }
+    .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Garante espaço ao redor*/
+    margin-top: 50px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .box {
+        flex: 1 1 100%;
+        margin: 10px 0; /* Reduzir o espaçamento entre as colunas em telas menores */
+    }
+  
+    .title {
+        margin-bottom: 10px; /* Reduzir o espaçamento entre o retângulo amarelo e o branco em telas menores */
+    }
+  
+  }
+  /*end of my new css test lab*/
+  
+  /*my new css gallery lab*/
+  
+  
+  .carousel-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+  .carousel-image, .carousel-video {
+    min-width: 100%;
+    height: 400px; /* Altura fixa para todas as imagens */
+    object-fit: cover;
+  }
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #f1c40f;
+    cursor: pointer;
+    user-select: none;
+    background: rgba(0, 0, 0, 0); /* Círculo invisível ao redor das setas */
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+  .carousel-dots {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .dot.active {
+    background-color: #f1c40f;
+  }
+  @media screen and (max-width: 768px) {
+    .carousel-image, .carousel-video {
+        height: 300px; /* Ajuste para telas menores */
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .carousel-image, .carousel-video {
+        height: 200px; /* Ajuste para telas muito pequenas */
+    }
+  }
+  
+  
+  /*end of new css gallerry */
+
+
+/* Section 3 - segundo formulário*/
+.section-3 {
+    background: url('../img/form.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.section-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.767), rgba(0, 0, 0, 0.842)); /* Degradê entre preto e cinza */
+    z-index: 1;
+}
+
+.section-3 .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.section-3 .content img {
+    max-width: 220px;
+    margin: 0 20px 0 0;
+}
+
+.section-3 .form-container {
+    display: flex;
+    flex-direction: column; /* Alterado para coluna */
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.section-3 .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centralizado */
+    max-width: 250px;
+    margin: 0;
+    /*margin: 12px 60px 60px 12px;*/
+}
+
+.section-3 .form input,
+.section-3 .form textarea,
+.section-3 .form button {
+    width: 100%;
+    margin: 1.5px 0;
+    padding: 10px;
+    border: #ffcc00;
+    border-radius: 5px;
+    opacity: 80%;
+}
+
+.section-3 .form button {
+    background-color: #ffcc00;
+    color: #000;
+    cursor: pointer;
+    opacity: 90%;
+}
+
+.section-3 .form small {
+    font-size: 14px;
+    color: #fff;
+}
+
+.section-3 h2, .section-3 h3, .section-3 p {
+    color: #ffcc00;
+    margin: 1.5px 32px 1px 10px;
+}
+
+.section-3 h2 {
+    font-size: 2em;
+}
+
+.section-3 h3 {
+    font-size: 1.5em;
+    color: #fff; /* Alterado para branco */
+}
+
+.section-3 p {
+    color: #fff;
+}
+
+.section-3 i {
+    color: #fff;
+    opacity: 60%;
+    font-size: 11px;
+}
+
+@media (max-width: 768px) {
+    .section-3 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-3 .form-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-3 .content {
+        margin: 0;
+        flex-direction: column; /* Alterado para coluna no mobile */
+    }
+
+    .section-3 h3 {
+        font-size: 1.5em;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #ffcc00;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    display: flow-root;/*flex*/
+    /*justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;*/
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.37);
+}
+
+footer a {
+    color: #333;
+    margin: 0 0;
+    text-decoration: none;
+    font-size: 16px;
+    border: none; /* Removido a borda preta */
+    padding: 0 5px;
+    justify-content: space-around;
+    border-radius: 0;
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-bottom {
+    background: #fff;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom img {
+    max-width: 8vw;/*160px*/
+    padding-left: 12vh;
+    padding-right: 12vh;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 720px) {
+
+.footer-bottom img {
+    max-width: 75px;
+    padding: 0;
+    margin: 2vh;
+}
+}
+
+@media (max-width: 360px) {
+    .footer-bottom img {
+        max-width: 0px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+/*new contact button fixed - botão fixo whatsapp*/
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px; /*20 / 55*/
+    right: 20px; /*20 / 30*/
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.37);
+    z-index: 1000;
+  }
+  
+  .whatsapp-button i {
+    font-size: 24px;
+    position: relative;
+    top: 2px;
+  }

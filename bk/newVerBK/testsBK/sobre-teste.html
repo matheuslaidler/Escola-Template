@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Missão e Metodologia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+        .containerBox {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .boxes {
+            width: 45%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .boxes h2 {
+            background-color: #666;
+            color: #f1c40f;
+            padding: 10px;
+            margin: -20px -20px 20px -20px;
+        }
+        .boxes:nth-child(1) h2 {
+            text-align: left;
+            padding-left: 10px;
+        }
+        .boxes:nth-child(2) h2 {
+            text-align: right;
+            padding-right: 10px;
+        }
+        .boxes p {
+            color: #333;
+            text-align: justify;
+        }
+        /*desktop text test*/
+        .boxes:nth-child(1) p {
+            color: #333;
+            text-align: left;
+        }
+        .boxes:nth-child(2) p {
+            color: #333;
+            text-align: right;
+        }
+        /*end*/
+        .faixa {
+            background-color: #f1c40f;
+            height: 50px;
+        }
+        @media (max-width: 768px) {
+            .containerBox {
+                flex-direction: column;
+            }
+            .boxes {
+                width: 100%;
+            }
+            .boxes:nth-child(1) h2 {
+                text-align: center;
+            }
+            .boxes:nth-child(2) h2 {
+                text-align: center;
+            }
+            .boxes:nth-child(1) p {
+                text-align: justify;
+            }
+            .boxes:nth-child(2) p {
+                text-align: justify;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="containerBox">
+        <div class="boxes">
+            <h2>Nossa Missão</h2>
+            <p>Nossa missão é proporcionar uma educação de excelência que inspire, desafie e capacite nossos alunos a se tornarem cidadãos críticos, criativos e comprometidos com a sociedade. Valorizamos a individualidade de cada criança e acreditamos que um ambiente de aprendizado seguro e inovador é essencial para o desenvolvimento das suas potencialidades.</p>
+        </div>
+        <div class="boxes">
+            <h2>Nossa Metodologia</h2>
+            <p>A metodologia da Cirandinha é especialmente adaptada à nossa realidade. Priorizamos a construção do conhecimento e o desenvolvimento das habilidades de cada aluno, fundamentados em pesquisas psicopedagógicas e princípios que incentivam uma visão crítica do mundo. Nosso compromisso é preparar as crianças para os desafios do futuro, focando em três pilares essenciais: - Aprender a aprender - Aprender a fazer - Aprender a ser</p>
+        </div>
+    </div>
+    <div class="faixa"></div>
+</body>
+</html>
