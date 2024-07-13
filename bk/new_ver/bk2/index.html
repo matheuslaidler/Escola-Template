@@ -28,13 +28,12 @@
                     <h1>Seu filho merece estudar na melhor escola.</h1>
                     <p>Conheça o local entrando em contato conosco</p>
                 </div>
-                <form class="form" id="welcome-contact" method="post" name="form1">
-                    <i>Formulário de contato</i>
+                <form class="form" action="welcome-contact.php" method="post" name="form1" id="welcome-contact"><i>Formulário de contato</i>
                     <input type="text" placeholder="Nome do Responsável *" name="responsavel" required>
                     <input type="text" placeholder="Nome do Aluno *" name="aluno" required>
                     <input type="text" placeholder="Telefone (Whatsapp) *" name="tel" required>
                     <input type="email" placeholder="Email" name="email" required>
-                    <button type="submit" id="submit1">Enviar</button>
+                    <button type="submit" value="submit">Enviar</button>
                 </form>
             </div>
         </div>
@@ -152,7 +151,7 @@
                 <p><b>Rua Mariz e Barros, 314 - Icaraí, Niterói - RJ</b></p>
                 <p><b>Whatsapp: (21) 96770-3752<br>Telefone: (21) 2714-5821</b></p>
             </div>
-            <form class="form" id="contact" method="post" name="form2">
+            <form class="form" action="contact.php" method="post" name="form2" id="contact">
                 <h2>Entre em Contato</h2>
                 <h3><i style="font-size: 14px;">Faça <span class="colorTheme">já</span> sua <span class="colorTheme">matrícula</span>!</i></h3>
                 <input type="text" placeholder="Nome do Responsável *" name="nome" required>
@@ -162,9 +161,9 @@
                 <input type="text" placeholder="Série (atualmente)" name="serie">
                 <input type="text" placeholder="Ano Pretendido" name="ano">
                 <input type="text" placeholder="Turno (manhã/tarde)" name="turno">
-                <input type="date" placeholder="Data de Nascimento" name="data">
-                <span><i>data de nascimento do aluno</i></span><br>
-                <button type="submit" id="submit2">Enviar</button>
+                <input type="date" placeholder="Data de Nascimento" name="data"><span><i>data de nascimento do aluno</i></span><br>
+                <!-- <textarea placeholder="Informações adicionais (extra)" name="extra"></textarea> -->
+                <button type="submit" value="submit" name="submit">Enviar</button>
             </form>
         </div>
     </section>
@@ -195,10 +194,12 @@
           <button onclick="document.getElementById('thanksMenu1').style.display='none'" class="butthanks">
             Estamos ansiosos para conhecer você e seu filho(a)!</button>
           <br>
-          <img src="img/down.png" alt="Arrow" class="arrow" />
+            <img src="img/down.png" alt="Arrow" class="arrow" />
+        <!--<button onclick="document.getElementById('thanksMenu1').style.display='none'" style="border: none; background-color: #fbfaf900;">
+            <img src="img/down.png" alt="Arrow" class="arrow" /></button>-->
         </div>
       </div>
-      
+
       <div class="menu" id="thanksMenu2">
         <div class="menu-content">
           <img src="img/logo.png" alt="Logo" class="imageTH" />
@@ -213,17 +214,49 @@
           <button onclick="document.getElementById('thanksMenu2').style.display='none'" style="border: none; background-color: #fbfaf900;">
             <b class="colorTheme" style="font-size: 14px;">X</b></button>
         </div>
-      </div>      
-    <!-- script para abrir o menu de envio do formulário, e formulário com ajax para PHP
-     php feito com tentativa de proteção contra injections -->
-    <script
-    defer=""
-    src="js/menuForm.js"
-    ></script>
+      </div>
+      <!-- script menu + form -->
+      <script>
+        //form1
+        document.getElementById('welcome-contact').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // Simulando o envio do formulário com PHP
+          // Aqui você pode fazer uma chamada AJAX para enviar o formulário sem recarregar a página
+          document.getElementById('thanksMenu1').style.display = 'flex';
+  
+          // Fechar o menu automaticamente após alguns segundos
+          setTimeout(function() {
+            document.getElementById('thanksMenu1').style.display = 'none';
+          }, 3000);
+        
+        });
+        //form2
+        document.getElementById('contact').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // Simulando o envio do formulário com PHP
+          // Aqui você pode fazer uma chamada AJAX para enviar o formulário sem recarregar a página
+          document.getElementById('thanksMenu2').style.display = 'flex';
+  
+          // Fechar o menu automaticamente após alguns segundos
+          setTimeout(function() {
+            document.getElementById('thanksMenu2').style.display = 'none';
+          }, 3000);
+        
+        });
+      </script>
+
     <!-- meu script atual feito para a nova galeria -->
     <script
     defer=""
     src="js/gallery.js"
     ></script>
+    <!-- para fazer o formulário funcionar via mailto configurado: --
+    <script
+      defer=""
+      src="js/mailto-1.js"></script>
+    <script
+      defer=""
+      src="js/mailto-2.js"></script>
+    -->
 </body>
 </html>

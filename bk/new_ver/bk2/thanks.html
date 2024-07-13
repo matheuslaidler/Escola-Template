@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Obrigado! - Cirandinha</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:wght@400;600&display=swap"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: 'IBM Plex Sans Condensed', sans-serif;
+        background-color: #FBFAF9;
+        color: #191818;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .container {
+        text-align: center;
+        padding: 20px;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .text {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+      .button {
+        font-size: 1rem;
+        color: #FFFFFF;
+        background-color: #fdcf0c;
+        border: none;
+        border-radius: 24px;
+        padding: 10px 20px;
+        box-shadow: 5px 5px 10px rgba(49, 48, 48, 0.62);
+        margin-bottom: 20px;
+      }
+      .image {
+        width: 150px;
+        margin-bottom: 20px;
+      }
+      .arrow {
+        width: 36px;
+        height: 36px;
+      }
+      @media (min-width: 768px) {
+        .title {
+          font-size: 2rem;
+        }
+        .text {
+          font-size: 1.25rem;
+        }
+        .button {
+          font-size: 1.5rem;
+        }
+        .image {
+          width: 200px;
+        }
+        .arrow {
+          width: 46px;
+          height: 46px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="img/logo.png" alt="Logo" class="image" />
+      <h2 class="title">Obrigado por Entrar em Contato!</h2>
+      <p class="text">
+        Recebemos suas informações e em breve nossa equipe entrará em contato com você. Enquanto isso, sinta-se à vontade para explorar nosso site e conhecer mais sobre nossa metodologia, projetos e a infraestrutura que oferecemos.
+      </p>
+      <button class="button" disabled>Estamos ansiosos para conhecer você e seu filho(a)!</button>
+      <br>
+      <img src="img/down.png" alt="Arrow" class="arrow" />
+    </div>
+
+       <!-- redirecionar para a página inicial dps de chegar no final da página ou quer descer mais que o limite
+            para telas em que já mostra a página inteira de uma vez, terá um delay para redirecionamento-->
+        <!---->
+        <script>
+          function redirectToIndex() {
+            window.location.href = 'index.html#videos'; // #videos #sobre #galeria #contato
+          }
+      
+          // Verifica se o usuário tentou rolar além do conteúdo da página
+          function checkScrollPosition() {
+            var windowHeight = window.innerHeight;
+            var bodyHeight = document.body.scrollHeight;
+            var scrolled = window.scrollY;
+            var scrollable = bodyHeight - windowHeight;
+      
+            // Verifica se o usuário rolou até o final da página ou tentou rolar além do limite
+            if ((windowHeight + scrolled) >= bodyHeight || (scrollable <= 0 && scrolled > 0)) {
+              redirectToIndex();
+            }
+          }
+      
+          // Adiciona um listener para o evento de scroll
+          window.addEventListener('scroll', checkScrollPosition);
+      
+          // Configura um atraso de 3 segundos antes de verificar a posição inicial
+          setTimeout(() => {
+            checkScrollPosition();
+          }, 1250); // 3000 milissegundos = 3 segundos
+        </script>
+      
+      
+      
+      
+      <!--
+        function redirectToIndex() {
+          window.location.href = 'index.html#videos'; //#videos #sobre #galeria #contato
+        }
+          -->
+  </body>
+</html>
