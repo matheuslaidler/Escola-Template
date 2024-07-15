@@ -315,7 +315,7 @@ section, footer {
 }
 
 
-/* sobre section - new pillars and gallery - Info / Sobre / About + galeria de fotos e video*/
+/* sobre section - new pillars  Info / Sobre / About */
 
 /*my new css to "pillars"*/
 
@@ -396,10 +396,26 @@ section, footer {
     }
   
   }
-  /*end of my new css test lab*/
+  /*end of my test lab*/
   
+  /*testimonial texts container my test lab*/
+
+  .testimonial {
+    text-align: center;
+    padding: 20px;
+    margin: 5px;
+  }
+  .testimonial h1 {
+    font-size: 24px;
+  }
+  .testimonial p {
+    font-size: 15px;
+  }
+  .testimonial a {
+    color: #fdcf0c
+  }
+
   /*my new css gallery lab*/
-  
   
   .carousel-container {
     width: 100%;
@@ -407,7 +423,7 @@ section, footer {
     margin: auto;
     position: relative;
     overflow: hidden;
-    border-radius: 2.5%;/*borda / canto arredondado nas galerias*/
+    border-radius: 2%;/*borda / canto arredondado nas galerias*/
     box-shadow: 1.5px 1.5px 25px rgba(0, 0, 0, 0.25); /*sombra*/
   }
   .carousel-slide {
@@ -416,7 +432,7 @@ section, footer {
   }
   .carousel-image, .carousel-video {
     min-width: 100%;
-    height: 400px; /* Altura fixa para todas as imagens */
+    height: 555px; /* Altura fixa para todas as imagens */
     object-fit: cover;
   }
   .carousel-arrow {
