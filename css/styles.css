@@ -664,6 +664,12 @@ footer p {
     padding-right: 12vh;
 }
 
+.footer-bottom a {
+    color: #33333396;
+    text-align: center;
+    font-size: 11px;
+}
+
 @media (max-width: 768px) {
     footer {
         flex-direction: column;
@@ -671,6 +677,16 @@ footer p {
 
     .footer-bottom {
         flex-direction: row;
+    }
+
+    .footer-bottom a {
+        font-size: 8px;
+    }
+
+    .footer-bottom p {
+        color: #333333b0;
+        text-align: center;
+        font-size: 11px;
     }
 }
 
