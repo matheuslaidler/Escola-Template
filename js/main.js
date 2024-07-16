@@ -136,42 +136,117 @@
  // erro caso falhe
  // menu caso dê certo
 
- document.addEventListener('DOMContentLoaded', function() {
-    function sendForm(formId, thanksMenuId, phpUrl) {
-        const form = document.getElementById(formId);
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenir comportamento padrão
-
-            const formData = new FormData(form);
-            fetch(phpUrl, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById(thanksMenuId).style.display = 'flex';
-                    setTimeout(() => {
-                        document.getElementById(thanksMenuId).style.display = 'none';
-                    }, 3000); // Menu de agradecimento por 3 segundos
-                } else {
-                    alert('Erro ao enviar o formulário. Por favor, tente novamente.');
-                }
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-                alert('Erro ao enviar o formulário. Por favor, tente novamente.');
-            });
-        });
-    }
-
-    sendForm('welcome-contact', 'thanksMenu1', 'welcome-contact.php');
-    sendForm('contact', 'thanksMenu2', 'contact.php');
-});
+// function sendForm(formId, thanksMenuId, phpUrl) {
+//    const form = document.getElementById(formId);
+//    form.addEventListener('submit', function(event) {
+//      event.preventDefault();
+//
+//      const formData = new FormData(form);
+//      fetch(phpUrl, {
+//        method: 'POST',
+//        body: formData
+//      })
+//      .then(response => response.json())
+//      .then(data => {
+//        if (data.success) {
+//          document.getElementById(thanksMenuId).style.display = 'flex';
+//          setTimeout(() => {
+//            document.getElementById(thanksMenuId).style.display = 'none';
+//          }, 3000);/*aumentar o delay que o menu fica aberto em ms -> 3000 = 3s*/
+//        } else {
+//          alert('Erro ao enviar o formulário. Por favor, tente novamente.');
+//        }
+//      })
+//      .catch(error => {
+//        console.error('Erro:', error);
+//        alert('Erro ao enviar o formulário. Por favor, tente novamente.');
+//      });
+//    });
+//  }
+//
+//  sendForm('welcome-contact', 'thanksMenu1', 'welcome-contact.php');
+//  sendForm('contact', 'thanksMenu2', 'contact.php');
 
   // script para abrir o menu de envio do formulário, e formulário com ajax para PHP
     // php feito com tentativa de proteção contra injections
 
+    //document.addEventListener('DOMContentLoaded', function() {
+    //    function sendForm(formId, thanksMenuId, phpUrl) {
+    //        const form = document.getElementById(formId);
+    //        form.addEventListener('submit', function(event) {
+    //            event.preventDefault(); // Prevenir comportamento padrão
+    //            console.log(`Formulário ${formId} enviado`);
+    //
+    //            const formData = new FormData(form);
+    //            fetch(phpUrl, {
+    //                method: 'POST',
+    //                body: formData
+    //           })
+    //           .then(response => {
+    //                console.log('Resposta recebida:', response);
+    //                return response.json();
+    //            })
+    //            .then(data => {
+    //                console.log('Dados recebidos:', data);
+    //                if (data.success) {
+    //                    document.getElementById(thanksMenuId).style.display = 'flex';
+    //                    setTimeout(() => {
+    //                        document.getElementById(thanksMenuId).style.display = 'none';
+    //                    }, 3000); // Menu de agradecimento por 3 segundos
+    //                } else {
+    //                    alert('Erro ao enviar o formulário: ' + data.message);
+    //                }
+    //            })
+    //            .catch(error => {
+    //                console.error('Erro:', error);
+    //                alert('Erro ao enviar o formulário. Por favor, tente novamente.');
+    //            });
+    //        });
+    //    }
+    //
+    //    sendForm('welcome-contact', 'thanksMenu1', 'welcome-contact.php');
+    //    sendForm('contact', 'thanksMenu2', 'contact.php');
+    //});
 
+
+    document.addEventListener('DOMContentLoaded', function() {
+        function sendForm(formId, thanksMenuId, phpUrl) {
+            const form = document.getElementById(formId);
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevenir comportamento padrão
+                console.log(`Formulário ${formId} enviado`);
+    
+                const formData = new FormData(form);
+                fetch(phpUrl, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => {
+                    console.log('Resposta recebida:', response);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Dados recebidos:', data);
+                    if (data.success) {
+                        document.getElementById(thanksMenuId).style.display = 'flex';
+                        setTimeout(() => {
+                            document.getElementById(thanksMenuId).style.display = 'none';
+                        }, 3000); // Menu de agradecimento por 3 segundos
+                    } else {
+                        alert('Erro ao enviar o formulário: ' + data.message);
+                    }
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    alert('Erro ao enviar o formulário. Por favor, tente novamente.');
+                });
+            });
+        }
+    
+        sendForm('welcome-contact', 'thanksMenu1', 'welcome-contact.php');
+        sendForm('contact', 'thanksMenu2', 'contact.php');
+    });
+    
+    
 
 //////////////

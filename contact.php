@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $destinatario = "site@crcirandinha.com.br";
+    $destinatario = "site@crcirandinha.com.br";//site@crcirandinha.com.br//matheuslaidler@gmail.com//onde enviar - teste
     $assunto = "Formulário de Contato - 2";
 
     $nomeResponsavel = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -28,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $body .= "Turno: $turno\n\n";
         $body .= "===================================\n";
 
-        $headers = "From: $destinatario\r\n";
-        $headers .= "Reply-To: $email\r\n";
+        $headers = "From: site@crcirandinha.com.br\r\n";
+        //$headers .= "Reply-To: $email\r\n";
         if (mail($destinatario, $assunto, $body, $headers)) {
             echo json_encode(['success' => true]);
         } else {
