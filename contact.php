@@ -28,7 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $body .= "Turno: $turno\n\n";
         $body .= "===================================\n";
 
-        $headers = "From: $email\r\n";
+        $headers = "From: $destinatario\r\n";
+        $headers .= "Reply-To: $email\r\n";
         if (mail($destinatario, $assunto, $body, $headers)) {
             echo json_encode(['success' => true]);
         } else {
