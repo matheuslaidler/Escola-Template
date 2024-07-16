@@ -68,16 +68,17 @@ section, footer {
 }
 
 .section-1 p {
-    font-size: 15px;
+    font-size: 13px;
     color: #fff;
     margin-top: 0;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.325);
 }
 
 .section-1 a {
-    font-size: 15px;
+    font-size: 26px;
     color: #fff;
     margin: 0;
+    padding: 2px;
 }
 
 .section-1 i {

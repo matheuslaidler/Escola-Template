@@ -21,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $body .= "===================================\n";
 
         $headers = "From: site@crcirandinha.com.br\r\n";
-        //$headers .= "Reply-To: $email\r\n";
         if (mail($destinatario, $assunto, $body, $headers)) {
             echo json_encode(['success' => true]);
         } else {

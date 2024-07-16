@@ -164,8 +164,8 @@
 //    });
 //  }
 //
-//  sendForm('welcome-contact', 'thanksMenu1', 'welcome-contact.php');
-//  sendForm('contact', 'thanksMenu2', 'contact.php');
+//  sendForm('welcome-contact', 'thanksMenu1', 'php/welcome-contact.php');
+//  sendForm('contact', 'thanksMenu2', 'php/contact.php');
 
   // script para abrir o menu de envio do formulário, e formulário com ajax para PHP
     // php feito com tentativa de proteção contra injections
@@ -204,8 +204,8 @@
     //        });
     //    }
     //
-    //    sendForm('welcome-contact', 'thanksMenu1', 'welcome-contact.php');
-    //    sendForm('contact', 'thanksMenu2', 'contact.php');
+    //    sendForm('welcome-contact', 'thanksMenu1', 'php/welcome-contact.php');
+    //    sendForm('contact', 'thanksMenu2', 'php/contact.php');
     //});
 
 
@@ -243,8 +243,8 @@
             });
         }
     
-        sendForm('welcome-contact', 'thanksMenu1', 'welcome-contact.php');
-        sendForm('contact', 'thanksMenu2', 'contact.php');
+        sendForm('welcome-contact', 'thanksMenu1', 'php/welcome-contact.php');
+        sendForm('contact', 'thanksMenu2', 'php/contact.php');
     });
     
     
