@@ -21,6 +21,22 @@ section, footer {
     color: #fdcf0c;  /*ffcc00*/
 }
 
+/*css para cor de links*/
+a:link {
+    color: #fdcf0c; /* Amarelo - Cor do Link normal */
+}
+
+a:visited {
+    color: #faa200; /* Laranja - Cor do Link visitado*/
+}
+
+a:hover {
+    color: #fadb53; /* Cor ao passar o mouse no link*/
+}
+
+a:active {
+    color: #ccaa13d3; /* Cor ao clicar no link*/
+}
 
 /* Section 1 */
 .section-1 {
@@ -725,9 +741,10 @@ footer p {
     z-index: 1000;
   }
   
-  .whatsapp-button i {
+  .whatsapp-button i {/*p/ qualquer <i> dentro do que tiver a classe "whatsapp-button*/
     font-size: 24px;
     position: relative;
+    color:#fff;/*colocado dps de ter atualizado a cor dos links do site - manter a cor branca sempre*/
     top: 2px;
   }
 

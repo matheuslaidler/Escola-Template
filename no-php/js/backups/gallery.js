@@ -1,11 +1,3 @@
-// Todos os .JS em um para o site
-
-// Creditos: Matheus Laidler
-
-//////////////
-// gallery.js
-//meu script atual feito para a nova galeria
-
   /*my new slide script to cirandinha/clicar e criar - Matheus Laidler*/
   const carousels = document.querySelectorAll('.carousel-container');
   carousels.forEach(carousel => {
@@ -121,52 +113,3 @@
 
       window.addEventListener('resize', setPositionByIndex);
   });
-
- ////////////
-
-///////////////
- // menuForm.js
-
- // codigo para funcionalidade da abertura do menu pós preenchimento do formulário
- // informações para o PHP com ajax sem precisar recarregar a página
- // erro caso falhe e abertura do menu caso dê certo, enquanto envia o email via php
-
- document.addEventListener('DOMContentLoaded', function() {
-    function sendForm(formId, thanksMenuId, phpUrl) {
-        const form = document.getElementById(formId);
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenir comportamento padrão
-            console.log(`Formulário ${formId} enviado`);
-
-            const formData = new FormData(form);
-            fetch(phpUrl, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                console.log('Resposta recebida:', response);
-                return response.json();
-            })
-            .then(data => {
-                console.log('Dados recebidos:', data);
-                if (data.success) {
-                    document.getElementById(thanksMenuId).style.display = 'flex';
-                    setTimeout(() => {
-                        document.getElementById(thanksMenuId).style.display = 'none';
-                    }, 3000); // Menu de agradecimento por 3 segundos
-                } else {
-                    alert('Erro ao enviar o formulário: ' + data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Erro:', error);
-                alert('Erro ao enviar o formulário. Por favor, tente novamente.');
-            });
-        });
-    }
-
-    sendForm('welcome-contact', 'thanksMenu1', 'php/welcome-contact.php');
-    sendForm('contact', 'thanksMenu2', 'php/contact.php');
-});
-
-//////////////
