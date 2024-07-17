@@ -2,8 +2,8 @@
 header('Content-Type: application/json');
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $destinatario = "site@crcirandinha.com.br";
-    $assunto = "Formulário de Contato Completo";
+    $destinatario = "EMAIL@DOMINIO.com.br";//email do seu dominio - para onde enviar os dados
+    $assunto = "Formulário de Contato - 2";
 
     $nomeResponsavel = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $email = filter_input(INPUT_POST, 'mail', FILTER_VALIDATE_EMAIL);
@@ -15,18 +15,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $dataNascimento = filter_input(INPUT_POST, 'data', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
     if ($email && !empty($nomeResponsavel) && !empty($telefone) && !empty($nomeAluno)) {
-        $body = "==================================\n";
-        $body .= "FALE CONOSCO - Formulário Completo\n";
-        $body .= "==================================\n\n";
-        $body .= "Nome do responsável: $nomeResponsavel\n";
+        $body = "===================================\n";
+        $body .= "FALE CONOSCO - ESCOLA | Form 2\n";
+        $body .= "===================================\n\n";
+        $body .= "Nome do Responsável: $nomeResponsavel\n";
         $body .= "Telefone de contato: $telefone\n";
         $body .= "Email de contato: $email\n\n";
-        $body .= "Nome do aluno: $nomeAluno\n";
+        $body .= "Nome do Aluno: $nomeAluno\n";
         $body .= "Nascido em: $dataNascimento\n\n";
-        $body .= "Série atual: $serie\n\n";
-        $body .= "Ano pretendido: $ano\n\n";
+        $body .= "Série Atual: $serie\n\n";
+        $body .= "Ano Pretendido: $ano\n\n";
         $body .= "Turno: $turno\n\n";
-        $body .= "==================================\n";
+        $body .= "===================================\n";
 
         $headers = "From: $destinatario\r\n";
         if (mail($destinatario, $assunto, $body, $headers)) {
