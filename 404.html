@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Página Não Encontrada</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <style>
+    body {
+        margin: 0;
+        font-family: 'IBM Plex Sans Condensed', Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .container {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+        position: relative;
+    }
+
+    .header, .footer {
+        background-color: #ffcc00;
+        height: 50px;
+        width: calc(100% - 40px); /* qlqr coisa ajustar a largura para coincidir com a largura do container */
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    .header {
+        top: 0;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .footer {
+        bottom: 0;
+        border-radius: 0 0 30px 30px;
+    }
+
+    .content {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 80px;
+        margin: 0;
+        color: #333333;
+    }
+
+    p {
+        font-size: 16px;
+        color: #666666;
+    }
+
+    .message, .suggestions {
+        background-color: #ffcc00;
+        padding: 15px;
+        border-radius: 30px;
+        margin: 10px auto;
+        max-width: 100%;
+    }
+
+    .message h2, .suggestions h2 {
+        margin-top: 0;
+    }
+
+    .message a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .suggestions ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .suggestions li {
+        margin: 5px 0;
+    }
+
+    .suggestions a {
+        color: #333333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .suggestions a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            display: block;
+            padding: 0;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0;
+            max-width: 100%;
+        }
+
+        .header, .footer {
+            width: 100%;
+            height: 40px;
+            left: 0;
+            transform: none;
+            border-radius: 0;
+        }
+
+        .content {
+            padding: 10px;
+            border-radius: 30px;
+            box-shadow: none;
+            width: 100%;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        h1 {
+            font-size: 60px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .message, .suggestions {
+            padding: 10px;
+            border-radius: 30px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="content">
+            <h1>404</h1>
+            <p>Page Not Found</p>
+            <div class="message">
+                <h2>Oops! Página não encontrada</h2>
+                <p>Parece que você se perdeu no caminho. A página que você está procurando não foi encontrada. Que tal voltar para a <a href="/">página inicial</a>?</p>
+            </div>
+            <div class="suggestions">
+                <h2>Sugestões</h2>
+                <p>Enquanto isso, aqui estão alguns atalhos você pode visitar:</p>
+                <ul>
+                    <li><a href="/#historia">Sobre nós e nossa história</a></li> <!-- tbm pode ser o #sobre-->
+                    <li><a href="/#galeria">Galeria de fotos e vídeos</a></li>
+                    <li><a href="/#formulario">Formulário de contato completo</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</body>
+</html>
